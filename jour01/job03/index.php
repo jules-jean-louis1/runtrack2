@@ -18,7 +18,7 @@ $type=['boolean','entier','chaîne de caractères', 'nombre à virgule flottante
     <header>
         <table id="tableau_01">
             <tr>
-                <th>Type</th>
+                <th id="01">Type</th>
                 <th>Nom</th>
                 <th>Valeur</th>
             </tr>
@@ -28,14 +28,24 @@ $type=['boolean','entier','chaîne de caractères', 'nombre à virgule flottante
         <section>
         <table>
             <tr>
-                <td>Carmen</td>
-                <td>33 ans</td>
-                <td>Espagne</td>
+                <td><?php echo $type [3]?></td>
+                <td><?php echo $motTab [0]?></td>
+                <td><?php echo $nVirguleTab [0]?></td>
             </tr>
             <tr>
-                <td>Michelle</td>
-                <td>26 ans</td>
-                <td>États-Unis</td>
+                <td><?php echo $type [1]?></td>
+                <td><?php echo $motTab [1]?></td>
+                <td><?php echo $noteTab [1]?></td>
+            </tr>
+            <tr>
+                <td><?php echo $type [1]?></td>
+                <td><?php echo $motTab [2]?></td>
+                <td><?php echo $noteTab [2]?></td>
+            </tr>
+            <tr>
+                <td><?php echo $type [0]?></td>
+                <td><?php echo $motTab [3]?></td>
+                <td><?php echo $noteTab [0]?></td>
             </tr>
         </table>
         </section>
