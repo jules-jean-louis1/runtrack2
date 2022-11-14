@@ -2,7 +2,8 @@
 $noteTab = [1,2,5,9];
 $nVirguleTab = ['9,48','14,50','18,66','50,51'];
 $motTab = ['Bonjour' , 'tous' , 'le' , 'monde' , '!'];
-$myBool =[true,false]
+$myBool =[true,false];
+$type=['boolean','entier','chaîne de caractères', 'nombre à virgule flottante']
 ?>
 
 <html lang="en">
@@ -15,13 +16,17 @@ $myBool =[true,false]
 </head>
 <body>
     <header>
-        <table>
+        <table id="tableau_01">
             <tr>
+                <th>Type</th>
                 <th>Nom</th>
-                <th>Âge</th>
-                <th>Pays</th>
+                <th>Valeur</th>
             </tr>
-
+        </table>
+    </header>
+    <main>
+        <section>
+        <table>
             <tr>
                 <td>Carmen</td>
                 <td>33 ans</td>
@@ -33,10 +38,6 @@ $myBool =[true,false]
                 <td>États-Unis</td>
             </tr>
         </table>
-    </header>
-    <main>
-        <section>
-
         </section>
     </main>
 </body>
