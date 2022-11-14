@@ -3,7 +3,16 @@ $noteTab = [1,2,5,9];
 $nVirguleTab = ['9,48','14,50','18,66','50,51'];
 $motTab = ['Bonjour' , 'tous' , 'le' , 'monde' , '!'];
 $myBool =[true,false];
-$type=['boolean','entier','chaîne de caractères', 'nombre à virgule flottante']
+$type=['boolean','entier','chaîne de caractères', 'nombre à virgule flottante'];
+$tableau1 = 
+[
+    2,
+    '9.48',
+    'Hello',
+    true,
+    false,
+    '14,50',
+];
 ?>
 
 <html lang="en">
@@ -52,18 +61,3 @@ $type=['boolean','entier','chaîne de caractères', 'nombre à virgule flottante
     </main>
 </body>
 </html>
-
-<!-- $note='1';
-$note2='2';
-$note3='3';
-$note4='4';
-$nVirgule='10,45';
-$nVirgule2='14,50';
-$nVirgule3='18,66';
-$mot='bonjour';
-$mot2='le';
-$mot3='monde';
-$mot4='!';
-$myBool=true;
-$myBool2='false'
- -->
