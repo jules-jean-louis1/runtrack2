@@ -1,6 +1,12 @@
 
 <?php 
-$str="La Plateforme"
+$str="La Plateforme";
+$str2="Vive";
+$str3="!";
+$val='6';
+$addition=$val +('4');
+$myBool=true;
+$myBool2=false;
 ?>
 
 
@@ -18,7 +24,12 @@ $str="La Plateforme"
         <section>
             <div class="job01_test">
                 <?php
-                echo $str
+                echo $str;
+                echo "<br>" . $str2 . ' ' . $str . ' ' . $str3;
+                echo "<br>" . $val;
+                echo "<br>" . $addition;
+                echo "<br>" . $myBool;
+                echo "<br>" . $myBool2;
                 ?>
             </div>
         </section>
