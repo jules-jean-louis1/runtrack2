@@ -1,5 +1,7 @@
-$str="La Plateforme"
 
+<?php 
+$str="La Plateforme"
+?>
 
 
 
@@ -16,7 +18,7 @@ $str="La Plateforme"
         <section>
             <div class="job01_test">
                 <?php
-                $str="La Plateforme"
+                echo $str
                 ?>
             </div>
         </section>

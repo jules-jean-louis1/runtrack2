@@ -7,4 +7,8 @@
 .job01_test {
     background-color: brown;
     color: aliceblue;
+    display: flex;
+    justify-content: center;
+    font-size: 24;
+    align-items: center;
 }
