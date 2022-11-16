@@ -6,16 +6,14 @@
 <?php
 $mile = '2000';
 
-for ($i = 2; $i <= $mile/2; $i++)
-  {
+for ($i = 2; $i <= $mile/2; $i++){
       if ($mile % $i === 0){
           echo " ";
-      {elseif ($mile % 5 === 0)
-        echo " ";
+      {elseif ($mile % 5 === 0){
+        echo '';
     }
-      } else
+       else
       echo $i;
       echo "<br>";
 }
-
 ?>
