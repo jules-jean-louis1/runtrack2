@@ -5,7 +5,7 @@ $cpt_post = '0';
 for ($i=0;insset($_POST[$i]);$i++){
     $cpt_post+=1;
 }
-echo $cpt_post;
+echo "Le nombre d’argument POST envoyé est :" . $cpt_post;
 
 ?>
 
