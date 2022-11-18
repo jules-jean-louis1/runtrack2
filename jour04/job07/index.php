@@ -1,12 +1,65 @@
-<!-- <?php
 
-/* $haut = $_GET['hauteur'];
+<?php
+
+$haut = $_GET['hauteur'];
 $largeur = $_GET['largeur'];
-echo $largeur;
-echo $haut  ; */
+$left = "/";
+$right = "\\";
+$base = "-";
 
-
+$size = 5;
+    // pyramid star pattern
+    $size = 5;
+    for($i = 0; $i < $largeur; $i++) {
+        // print spaces
+        for($j = 0; $j < $largeur - $i - 1; $j++) {
+            echo "&nbsp;&nbsp;";
+        }
+        // print stars
+        for($k = 0; $k < 2 * $i + 1; $k++) {
+            if($i === 0) {
+                echo '';
+            } if ( $i === $haut -1){
+                echo $base;
+            }
+            else {
+                if($k === 0 ) {
+                    echo $left;
+                } if($k === 2 * $i){
+                    echo $right;
+                }
+                else {
+                    echo "&nbsp;&nbsp;";
+                }
+            }
+        }
+        echo "<br>";
+    }
+    // carrre
+    for($i = 0; $i < $haut; $i++) {
+        // affiché les colonnes
+        for($j = 0; $j < $haut; $j++) {
+            // n'afficher que la première et dernière colonnes a l'aide des index
+            if($i === 0 || $i === $largeur - 1) {
+                echo "_";
+            }
+            else {
+                // faire de même pour les rangs
+                if($j === 0) {
+                    echo "|";
+                } if ($j === $haut - 1) {
+                    echo "|";
+                }
+                else {
+                    // use &nbsp; pour les espaces
+                    echo "&nbsp;&nbsp;";
+                }
+            }
+        }
+        echo "<br>";
+    }
 ?>
+
 
 <html lang="en">
 <head>
@@ -21,51 +74,4 @@ echo $haut  ; */
         </form>
     </main>
 </body>
-</html> -->
-<?php
-    // pyramid star pattern
-    $size = 5;
-    for($i = 0; $i < $size; $i++) {
-        // print spaces
-        for($j = 0; $j < $size - $i - 1; $j++) {
-            echo "&nbsp;&nbsp;";
-        }
-        // print stars
-        for($k = 0; $k < 2 * $i + 1; $k++) {
-            if($i === 0 || $i === $size - 1) {
-                echo "*";
-            }
-            else {
-                if($k === 0 || $k === 2 * $i) {
-                    echo "*";
-                }
-                else {
-                    echo "&nbsp;&nbsp;";
-                }
-            }
-        }
-        echo "<br>";
-    }
-    // hollow square pattern
-    $size = 5;
-    for($i = 0; $i < $size; $i++) {
-        // print column
-        for($j = 0; $j < $size; $j++) {
-            // print only star in first and last row
-            if($i === 0 || $i === $size - 1) {
-                echo "*";
-            }
-            else {
-                // print star only in first and last position row
-                if($j === 0 || $j === $size - 1) {
-                    echo "*";
-                }
-                else {
-                    // use &nbsp; for space
-                    echo "&nbsp;&nbsp;";
-                }
-            }
-        }
-        echo "<br>";
-    }
-?>
+</html>
