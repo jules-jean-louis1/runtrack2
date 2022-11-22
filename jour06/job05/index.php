@@ -1,16 +1,4 @@
-<?php
-
-$styl1 = 'styles1.php';
-if (isset($_POST['envoyer'])) {
-    if (isset($_GET[''])) {
-        echo "o";
-    } 
-    
-} 
-
-
-
-?>
+<!-- 
 
 <html lang="en">
 <head>
@@ -31,6 +19,43 @@ if (isset($_POST['envoyer'])) {
                 <input type="submit" value="valid" name="envoyer"><br />
             </select> <br /> <br /> 
         </form>
+    </main>
+</body>
+</html> -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style1.php"> -->
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div>Formulaire</div>
+        <div>
+            <?php
+                $green = 'Green';
+                $red = 'Red';
+                $select = 'Blue';
+                $styl = ['Blue','Green','Red',];
+                
+                echo "<select>";
+                foreach ($styl as $colors) {
+                    if ($select == $colors) {
+                        echo "<option selected='select' value='$colors'>$colors</option>";
+                        echo '<link href="/styles2.css" media="screen" rel="stylesheet" type="text/css" />';
+                    } else {
+                        echo "<option value='$colors'>$colors</option>";
+                    }
+                }echo "<input type='submit' value='envoi' name='envoyer'>";
+                echo "</select>";
+                
+
+            ?>
+            
+        </div>
     </main>
 </body>
 </html>
