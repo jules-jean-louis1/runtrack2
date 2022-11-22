@@ -18,16 +18,27 @@ Cela est valable que l’on crie ou non (majuscules et minuscules). -->
 function leetSpeak($str)
 {
     for ($i=0; isset($str[$i]) ; $i++) { 
-        if ($str[$i] === 'B'|| $str[$i] === 'b') {
-            $str[$i] == '8';
+        if ($str[$i] === 'A'|| $str[$i] === 'a') {
+            echo 4;
+        } elseif ($str[$i] === 'B'|| $str[$i] === 'b') {
+            echo 8;
         } elseif ($str[$i] === 'E'|| $str[$i] === 'e') {
-            $str[$i] == '3';
-        } elseif ($str[$i] === 'A'|| $str[$i] === 'a') {
-            $str[$i] == '4';
+            echo 3;
+        } elseif ($str[$i] === 'G'|| $str[$i] === 'g') {
+            echo 6;
+        } elseif ($str[$i] === 'L'|| $str[$i] === 'l') {
+            echo 1;
+        } elseif ($str[$i] === 'S'|| $str[$i] === 's') {
+            echo 5;
+        } elseif ($str[$i] === 'T'|| $str[$i] === 't') {
+            echo 7;
+        } else {
+            echo $str[$i];
         }
-    } echo $str[$i];
+    }
 }
 
 $str = "Elle doit retourner la chaîne de caractères";
 
+leetSpeak($str)
 ?>

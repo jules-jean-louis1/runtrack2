@@ -6,7 +6,7 @@
 ?>
 
 
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,8 @@
 </head>
 <body>
     <main>
-        <form action="index.php" method="post">
+        <form action="index.php" method="post" name="style">
+            <p>Selectionné le style</p>
             <select name="select" id="">
                 <option value="" name="gars">Gras</option>
                 <option value="" name="maj">Majuscule</option>
