@@ -1,11 +1,25 @@
 <?php
 
-
+$str = "Lorsque vous validez le formulaire, vous devez appliquer des transformations";
+function styletext()
+{
+    
+}
+if (isset($_POST['envoyer'])) {
+    if (!empty($_POST['style'])) {
+        $selected = $_POST['style'];
+        if ($selected === $_POST['maj']) {
+            echo "<b>". $str ."</b>";   
+        }
+    }else {
+        echo "Sélectionné un style";
+    }
+}
 
 
 ?>
 
-
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -15,14 +29,14 @@
 </head>
 <body>
     <main>
-        <form action="index.php" method="post" name="style">
-            <p>Selectionné le style</p>
-            <select name="select" id="">
-                <option value="" name="gars">Gras</option>
-                <option value="" name="maj">Majuscule</option>
-                <option value="" name="underline">Souligner</option>
-                <input type="submit" value="envoyer" name="ok">
+        <form action="" method="POST">
+            <select name="style" id="">
+                <option value="chosir style"></option>
+                <option value="Gras">Gras</option>
+                <option value="Majuscule" name="maj">Majuscule</option>
+                <option value="Souligner" name="abc">Souligner</option>
             </select>
+            <input type="submit" value="choisir" name="envoyer">
         </form>
     </main>
 </body>
