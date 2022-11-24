@@ -1,0 +1,1 @@
+SELECT SUM(superficie) FROM `jour09`.`etage`;

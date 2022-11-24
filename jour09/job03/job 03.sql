@@ -1,0 +1,1 @@
+SELECT * FROM `etudiants` WHERE (`etudiants`.`id` = 1) OR (`etudiants`.`id` = 2) OR (`etudiants`.`id` = 3) OR (`etudiants`.`id` = 4) OR (`etudiants`.`id` = 5) OR (`etudiants`.`id` = 6) OR (`etudiants`.`id` = 7)

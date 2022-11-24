@@ -1,0 +1,1 @@
+SELECT SUM(capacite) FROM `jour09`.`salles`;
