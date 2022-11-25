@@ -2,7 +2,7 @@
 
 $mysqli = new mysqli("localhost","root","","jour09");
 
-$result = mysqli_query($mysqli,"SELECT * FROM `salles` ORDER BY `salles`.`capacite` ASC");
+$result = mysqli_query($mysqli,"SELECT salles . nom , etage.nom FROM `salles` INNER JOIN `etage` ON salles.id_etage = etage.id;");
 $row = $result->fetch_all();
 
 ?>
@@ -10,7 +10,7 @@ $row = $result->fetch_all();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>job10</title> 
+	<title>job13</title> 
 	<style>
 		table {
 			border:1px solid #b3adad;
@@ -36,15 +36,14 @@ $row = $result->fetch_all();
 	<table>
 		<thead>
 			<tr>
-				<th>Nom</th>
-				<th>id_etage</th>
-				<th>capacite</th>
+				<th>Nom des salles</th>
+				<th>Nom de l'etage</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
             <?php
-                    for ($i=1; isset($row[0][$i]) ; $i++) 
+                    for ($i=0; isset($row[0][$i]) ; $i++) 
                     { 
                         echo "<td>" . $row[0][$i] . "</td>";
                     }
@@ -52,7 +51,7 @@ $row = $result->fetch_all();
 			</tr>
 			<tr>
             <?php
-                    for ($i=1; isset($row[1][$i]) ; $i++) 
+                    for ($i=0; isset($row[1][$i]) ; $i++) 
                     { 
                         echo "<td>" . $row[1][$i] . "</td>";
                     }
@@ -60,7 +59,7 @@ $row = $result->fetch_all();
 			</tr>
 			<tr>
             <?php
-                    for ($i=1; isset($row[2][$i]) ; $i++) 
+                    for ($i=0; isset($row[2][$i]) ; $i++) 
                     { 
                         echo "<td>" . $row[2][$i] . "</td>";
                     }
@@ -68,7 +67,7 @@ $row = $result->fetch_all();
 			</tr>
 			<tr>
             <?php
-                    for ($i=1; isset($row[3][$i]) ; $i++) 
+                    for ($i=0; isset($row[3][$i]) ; $i++) 
                     { 
                         echo "<td>" . $row[3][$i] . "</td>";
                     }
@@ -76,7 +75,7 @@ $row = $result->fetch_all();
 			</tr>
 			<tr>
             <?php
-                    for ($i=1; isset($row[4][$i]) ; $i++) 
+                    for ($i=0; isset($row[4][$i]) ; $i++) 
                     { 
                         echo "<td>" . $row[4][$i] . "</td>";
                     }
@@ -84,7 +83,7 @@ $row = $result->fetch_all();
 			</tr>
 			<tr>
             <?php
-                    for ($i=1; isset($row[5][$i]) ; $i++) 
+                    for ($i=0; isset($row[5][$i]) ; $i++) 
                     { 
                         echo "<td>" . $row[5][$i] . "</td>";
                     }

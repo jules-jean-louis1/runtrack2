@@ -2,15 +2,17 @@
 
 $mysqli = new mysqli("localhost","root","","jour09");
 
-$result = mysqli_query($mysqli,"SELECT * FROM `salles` ORDER BY `salles`.`capacite` ASC");
+$result = mysqli_query($mysqli,"SELECT nom, prenom, naissance FROM jour09.etudiants WHERE naissance BETWEEN '1998-01-01' AND '2018-01-01'");
 $row = $result->fetch_all();
 
 ?>
 
+
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>job10</title> 
+	<title>job12</title> 
 	<style>
 		table {
 			border:1px solid #b3adad;
@@ -37,14 +39,14 @@ $row = $result->fetch_all();
 		<thead>
 			<tr>
 				<th>Nom</th>
-				<th>id_etage</th>
-				<th>capacite</th>
+				<th>Prénom</th>
+				<th>Naissance</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
             <?php
-                    for ($i=1; isset($row[0][$i]) ; $i++) 
+                    for ($i=0; isset($row[0][$i]) ; $i++) 
                     { 
                         echo "<td>" . $row[0][$i] . "</td>";
                     }
@@ -52,7 +54,7 @@ $row = $result->fetch_all();
 			</tr>
 			<tr>
             <?php
-                    for ($i=1; isset($row[1][$i]) ; $i++) 
+                    for ($i=0; isset($row[1][$i]) ; $i++) 
                     { 
                         echo "<td>" . $row[1][$i] . "</td>";
                     }
@@ -60,33 +62,9 @@ $row = $result->fetch_all();
 			</tr>
 			<tr>
             <?php
-                    for ($i=1; isset($row[2][$i]) ; $i++) 
+                    for ($i=0; isset($row[2][$i]) ; $i++) 
                     { 
                         echo "<td>" . $row[2][$i] . "</td>";
-                    }
-                ?>
-			</tr>
-			<tr>
-            <?php
-                    for ($i=1; isset($row[3][$i]) ; $i++) 
-                    { 
-                        echo "<td>" . $row[3][$i] . "</td>";
-                    }
-                ?>
-			</tr>
-			<tr>
-            <?php
-                    for ($i=1; isset($row[4][$i]) ; $i++) 
-                    { 
-                        echo "<td>" . $row[4][$i] . "</td>";
-                    }
-                ?>
-			</tr>
-			<tr>
-            <?php
-                    for ($i=1; isset($row[5][$i]) ; $i++) 
-                    { 
-                        echo "<td>" . $row[5][$i] . "</td>";
                     }
                 ?>
 			</tr>

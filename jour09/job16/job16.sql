@@ -1,5 +1,3 @@
-SELECT `etage`.`nom` 
-AS `nom_etage`, `salles`.`nom` AS `Biggest Room`, `salles`.`capacite` AS `capacite_salle` 
-FROM `salles` 
-INNER JOIN `etage` ON `salles`.`id_etage` = `etage`.`id` 
-WHERE `salles`.`capacite` = (SELECT MAX(`capacite`) FROM `salles`);
+SELECT salles.nom 
+AS Biggest_Room, salles.capacite, etage.nom 
+FROM salles JOIN `etage` ON salles.id_etage = etage.id ORDER BY (salles.capacite) DESC LIMIT 1; 
