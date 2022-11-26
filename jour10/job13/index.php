@@ -42,53 +42,16 @@ $row = $result->fetch_all();
 		</thead>
 		<tbody>
 			<tr>
-            <?php
-                    for ($i=0; isset($row[0][$i]) ; $i++) 
+                <?php
+                for ($i=0; isset($row[$i]) ; $i++) { 
+                    echo "<tr>";
+                    for ($j=0; isset($row[$i][$j]) ; $j++) 
                     { 
-                        echo "<td>" . $row[0][$i] . "</td>";
+                        echo "<td>" . $row[$i][$j] . "</td>";	# code...
                     }
+                    echo "</tr>";
+                }
                 ?>
-			</tr>
-			<tr>
-            <?php
-                    for ($i=0; isset($row[1][$i]) ; $i++) 
-                    { 
-                        echo "<td>" . $row[1][$i] . "</td>";
-                    }
-                ?>
-			</tr>
-			<tr>
-            <?php
-                    for ($i=0; isset($row[2][$i]) ; $i++) 
-                    { 
-                        echo "<td>" . $row[2][$i] . "</td>";
-                    }
-                ?>
-			</tr>
-			<tr>
-            <?php
-                    for ($i=0; isset($row[3][$i]) ; $i++) 
-                    { 
-                        echo "<td>" . $row[3][$i] . "</td>";
-                    }
-                ?>
-			</tr>
-			<tr>
-            <?php
-                    for ($i=0; isset($row[4][$i]) ; $i++) 
-                    { 
-                        echo "<td>" . $row[4][$i] . "</td>";
-                    }
-                ?>
-			</tr>
-			<tr>
-            <?php
-                    for ($i=0; isset($row[5][$i]) ; $i++) 
-                    { 
-                        echo "<td>" . $row[5][$i] . "</td>";
-                    }
-                ?>
-			</tr>
 		</tbody>
 	</table>
 </body>
